@@ -44,15 +44,14 @@
                         5px 5px 0 0 $verde-medio);
     transition: .3s;
     &:hover{
-      @include box-shadow(3px 5px 0 -2 $verde-padrao,
-                          5px 5px 0 0 $verde-medio);
+      @include box-shadow(3px 5px 0 0 $verde-padrao);
     }
   }
 }
 
 .contato-info{
   display: inline-block;
-  color:$verde-medio;
+  color:$verde-padrao;
   margin-top: 2em;
   margin-bottom: 3em;
   @include d(l){
