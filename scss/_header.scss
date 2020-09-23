@@ -11,7 +11,7 @@ header{
   justify-content: flex-end;
   align-items: center;
   padding: 10px 2%;
-  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+  @include box-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
   margin-bottom: 4rem;
 }
 
@@ -55,7 +55,7 @@ button:hover{
   background-color: $verde-padrao;
   border: 2px solid $verde-padrao;
   cursor: pointer;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  @include box-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .menu{
