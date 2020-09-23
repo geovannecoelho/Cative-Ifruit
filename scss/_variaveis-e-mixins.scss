@@ -1,0 +1,50 @@
+// Cores
+$verde-padrao: #21e0a0;
+$verde-medio: #7fffd4;
+$verde-escuro:#0B9466;
+$preto: #000000;
+$cinza: #30332E;
+$success: #1ab912;
+$branco: #ffffff;
+
+// Fontes
+$fonte-1: 'Montserrat', sans-serif;
+$fonte-2: 'Roboto', sans-serif;
+
+@function em($pixel, $contexto: 16) {
+	@return $pixel / $contexto + em;
+}
+
+@mixin tipo-1($size) {
+	font-family: $fonte-1;
+	margin-top: 10px;
+	font-weight: bold;
+	@if $size == 18 {
+		font-size: em(18);
+		line-height: em(30, 18);
+	}
+}
+
+@mixin tipo-2($size) {
+	font-family: $fonte-2;
+	font-weight: bold;
+	@if $size == 18 {
+		font-size: em(18);
+		line-height: em(30, 18);
+	}
+	@else if $size == 24 {
+		font-size: em(24);
+		line-height: em(30, 24);
+	}
+}
+
+@mixin box-shadow($shadow...) {
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+
+
+
+

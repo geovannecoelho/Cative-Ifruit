@@ -1,0 +1,121 @@
+a, button {
+  @include tipo-1(18);
+  margin-top: 0px;
+  color: $branco;
+  text-decoration: none;
+}
+
+header{
+  background-color: $verde-padrao;  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 2%;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+  margin-bottom: 4rem;
+}
+
+.logo-nav{
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.nav__links{
+  list-style: none;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a{
+  transition: all 0.3s ease;
+}
+
+.nav__links li a:hover{
+  transition: all 0.3s ease;
+  color: $cinza;
+}
+
+button {
+  margin-left: 30px;
+  padding: 10px 30px;
+  background: none;
+  color: $branco;
+  border: 2px solid $branco;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: $verde-padrao;
+  border: 2px solid $verde-padrao;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.menu{
+  display: none;
+}
+
+@media only screen and (max-width: 760px){
+  .nav__links, .btn{
+    display: none;
+  }
+  .menu{
+    display: inherit;
+  }
+}
+
+.overlay{
+  height: 140px;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: $cinza;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.overlay__content{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overley a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover, .overlay a:focus{
+  color: $verde-medio;
+}
+
+.overlay .close{
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 480px){
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}

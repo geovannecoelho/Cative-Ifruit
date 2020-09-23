@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../scss/style.scss",
+		"../scss/_grid.scss"
+	],
+	"sourcesContent": [
+		"// @import 'reset';\r\n\r\n@import 'grid';",
+		"/* Grupo cative - Projeto Ifruit - Nac Sass\r\nGrid - Estrutura do projeto\r\n\r\nGrid - Variaveis */ \r\n$cols: 12;\r\n$gutter: 20px;\r\n$l-device: 1200px;\r\n$m-device: 760px;\r\n$s-device: 480px;\r\n\r\n//Box-Sizing\r\n*, *::after, *::before{\r\n  box-sizing: border-box;\r\n}\r\n\r\n// Mixins\r\n\r\n@mixin d($size){\r\n  @if $size == l {\r\n    @media screnn and (min-width: $l-device ){\r\n      @content;\r\n    }\r\n  }\r\n  @else if $size == m {\r\n    @media screnn and (min-width: #{$m-device}) and (max-width: $l-device - 1){\r\n      @content;\r\n    }\r\n  }\r\n  @else if $size == s {\r\n    @media screnn and (max-width: $m-device - 1){\r\n      @content;\r\n    }\r\n  }\r\n}\r\n\r\n\r\n// Grid - Função\r\n@function grid($col, $offset: false){\r\n  $width: $col / $cols * 100 + \"%\";\r\n  $result: calc(#{$width} - #{$gutter});\r\n  @if $offset == offset {\r\n    $gutter: $gutter / 2;\r\n    $result: calc(#{$width} + #{$gutter});\r\n  }\r\n  @return $result;\r\n}\r\n\r\n// Gerando os grids\r\n@for $i from 1 through $cols{\r\n  .grid-#{$i} {\r\n    width: grid($i);\r\n  }\r\n}\r\n"
+	],
+	"names": [],
+	"mappings": "ACAA;;;mBAGmB;;AAQnB,AAAA,CAAC,EAAE,CAAC,AAAA,OAAO,EAAE,CAAC,AAAA,QAAQ,CAAA;EACpB,UAAU,EAAE,UAAU;CACvB;;;AAoCC,AAAA,OAAO,CAAK;EACV,KAAK,EAXE,qBAA4B;CAYpC;;;AAFD,AAAA,OAAO,CAAK;EACV,KAAK,EAXE,sBAA4B;CAYpC;;;AAFD,AAAA,OAAO,CAAK;EACV,KAAK,EAXE,gBAA4B;CAYpC;;;AAFD,AAAA,OAAO,CAAK;EACV,KAAK,EAXE,sBAA4B;CAYpC;;;AAFD,AAAA,OAAO,CAAK;EACV,KAAK,EAXE,sBAA4B;CAYpC;;;AAFD,AAAA,OAAO,CAAK;EACV,KAAK,EAXE,gBAA4B;CAYpC;;;AAFD,AAAA,OAAO,CAAK;EACV,KAAK,EAXE,sBAA4B;CAYpC;;;AAFD,AAAA,OAAO,CAAK;EACV,KAAK,EAXE,sBAA4B;CAYpC;;;AAFD,AAAA,OAAO,CAAK;EACV,KAAK,EAXE,gBAA4B;CAYpC;;;AAFD,AAAA,QAAQ,CAAI;EACV,KAAK,EAXE,sBAA4B;CAYpC;;;AAFD,AAAA,QAAQ,CAAI;EACV,KAAK,EAXE,sBAA4B;CAYpC;;;AAFD,AAAA,QAAQ,CAAI;EACV,KAAK,EAXE,iBAA4B;CAYpC"
+}

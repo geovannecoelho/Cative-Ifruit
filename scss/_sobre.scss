@@ -1,0 +1,44 @@
+.sobre{
+  margin-top: 60px;
+  @include d(s){
+    margin-top: 20px;
+  }
+}
+
+.logo{
+  margin-bottom: 60px;
+}
+
+.sobre-info{
+  border-right: 2px solid $cinza;
+  max-width: 320px;
+  p{
+    padding-top: 10px ;
+  }
+  p:first-child{
+    border-bottom: 2px solid $preto;
+    padding-bottom: 10px;
+  }
+}
+
+.sobre-telefone{
+  color:$verde-padrao;
+  font-weight: bold;
+  @include d(s) {
+    margin-bottom: 40px;
+  }
+}
+
+.aberto{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: $success;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.sobre-foto{
+  border: 10px solid $verde-medio;
+  float: right;
+}
