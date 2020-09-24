@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/style.css">
+  <link rel="shortcut icon" href="../src/Logo_favicon.png" type="image/x-icon">
+  <title>Cative - Ifruit</title>
+</head>
+<body>
+
+  <header>
+    <img class="logo-nav" src="../src/Logo.png" alt="Logo">
+    <nav class="nav__links">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="#"> <button>Realizar Pedido</button></a>
+    <a onclick="openNav()" class="menu" href="#"> <button>Menu</button></a>
+    <div id="mobile__menu" class="overlay">
+      <a class="close" onclick="closeNav()">&times;</a>
+      <div class="overlay__content">
+        <a href="../index.html">Home</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </div>
+  </header>
+	
+	<section class="container produto" id="produtos">
+		<h1 class="grid-12 titulo">Produtos</h1>
+		<div class="grid-4">
+			<div class="produto-item">
+				<img src="../src/fruta.jpg" alt="">
+				<h2>Frutas</h2>
+				<ul>
+					<li><span>R$ 5,70 kg -</span> Banana</li> 
+					<li><span>R$ 11,70 kg -</span>Maçã</li>
+					<li><span>R$ 15,70 kg -</span>Uva</li>
+					<li><span>R$ 7,70 kg -</span>Morango</li>
+					<li><span>R$ 9,50 un -</span>Abacaxi</li>
+					<li><span>R$ 5,70 kg -</span>Mamão</li>
+					<li><span>R$ 11,70 kg -</span>Laranja</li>
+				</ul>
+			</div>
+			<div class="produto-item">
+				<img src="../src/verduras.jpg" alt="Foto Prato 2">
+				<h2>Verduras</h2>
+				<ul>
+					<li><span>R$ 10,70 kg -</span>Mostarda</li>
+					<li><span>R$ 22,70 kg -</span>Agrião</li>
+					<li><span>R$ 33,70 kg -</span>Alface</li>
+					<li><span>R$ 14,70 kg -</span>Repolho</li>
+					<li><span>R$ 13,70 kg -</span>Couve</li>
+					<li><span>R$ 13,70 kg -</span>Coentro</li>
+					<li><span>R$13,70 kg -</span>Espinafre</li>
+				</ul>
+			</div>
+			<div class="produto-item">
+				<img src="../src/vegetal.jpg" alt="Foto Prato 2">
+				<h2>Legumes</h2>
+				<ul>
+					<li><span>R$ 15,70 kg -</span>Pepino</li>
+					<li><span>R$ 7,70 kg -</span>Batata-doce</li>
+					<li><span>R$ 2,70 kg -</span>Cenoura</li>
+					<li><span>R$ 3,20 kg -</span>Ervilha</li>
+					<li><span>R$ 9,10 kg -</span>Mandioca</li>
+					<li><span>R$ 2,10 kg -</span>Mandioquinha</li>
+					<li><span>R$ 10,70 kg -</span>Rabanete</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<p>Cative Ifruit 2020 ©. Todos os direitos reservados</p>
+		</div>
+	</footer>
+
+  <script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>
